@@ -1,0 +1,19 @@
+Study_id,Reference,Study,Study_site,Region,N,a_c,a,c,b,r2,uL,uW,tL,tl_min,tl_max,Gender,Spear,minD,maxD,Years,lineal,potencial,lon,lat,Gender_site
+Dahl,@dahl_2014,"Dahl & Patterson, 2014",Northern Gulf of Mexico,GoM,934,2.07E-06,2.07E-06,-5.684029655,3.34,0.98,mm,g,total,67,377,Both,Yes,NA,NA,2013 - 2014,NA,NA,-87.090436,29.703306,Both
+APA,@aguilarperera_2016,"Aguilar-Perera & Quijano-Puerto, 2016","Alacranes Reef, Mexico",GoM,472,-2.24,2.88E-06,-5.54,3.3,0.95,cm,g,total,98,358,Both,Yes,5,20,2011 - 2013,716.8438214,716.8438214,-89.71222,22.52444,Both
+APF,@aguilarperera_2016,"Aguilar-Perera & Quijano-Puerto, 2016","Alacranes Reef, Mexico",GoM,67,-5.93,1.17E-06,-5.93,3.47,0.95,mm,g,total,152,345,Female,Yes,5,20,2011 - 2013,790.5259193,790.5259193,-89.71222,22.52444,Female
+APM,@aguilarperera_2016,"Aguilar-Perera & Quijano-Puerto, 2016","Alacranes Reef, Mexico",GoM,59,-5.38,4.17E-06,-5.38,3.23,0.95,mm,g,total,151,325,Male,Yes,5,20,2011 - 2013,687.6061989,687.6061989,-89.71222,22.52444,Male
+Sandel,@sandel_2015,"Sandel et al., 2015",Costa Rica,Caribbean,458,2.35E-02,3.64E-05,-4.44E+00,2.81,NA,cm,g,total,60,380,Both,Yes*,NA,NA,2011,512.7422052,512.7422052,-82.75986,9.693611,Both
+Chin,@chin_2016,"Chin et al., 2016","Discovery Bay, Jamaica",Caribbean,419,-4.56,2.75E-05,-4.56,2.85,0.8715,mm,g,total,93,410,Both,Yes,18.3,18.3,2012 - 2014,490.4490825,490.4490825,-77.40814,18.46616,Both
+Barbour,@barbour_2011,"Barbour et al., 2011",North Carolina,Western Atlantic,774,2.89E-05,2.89E-05,-4.539102157,2.89,NA,mm,g,total,75,475,Both,Yes*,27,45,2004 - 2009,650.5107695,650.5107695,-75.633725,34.735571,Both
+deLeon,@deleon_2013,"de Leon et al., 2013",Bonaire,Caribbean,1450,0.00002285,0.00002285,-4.641113796,2.89,0.9216,mm,g,total,NA,NA,Both,NA,NA,NA,NA,514.3311794,514.3311794,-68,12,Both
+FoggA,@fogg_2013,"Fogg et al., 2013",Northern Gulf of Mexico,GoM,582,-5.86E+00,1.38E-06,-5.86E+00,3.4349,0.99,mm,g,total,80,385,Both,Yes*,NA,NA,2012,756.1697949,756.1697949,-87.134298,29.058084,Both
+FoggM,@fogg_2013,"Fogg et al., 2013",Northern Gulf of Mexico,GoM,119,-5.5693,2.70E-06,-5.57E+00,3.31,0.97,mm,g,total,126,385,Male,Yes*,NA,NA,2012,710.5018724,710.5018724,-87.134298,29.058084,Male
+FoggF,@fogg_2013,"Fogg et al., 2013",Northern Gulf of Mexico,GoM,115,-5.17E+00,6.76E-06,-5.17E+00,3.1437,0.94,mm,g,total,157,337,Female,Yes*,NA,NA,2012,672.6462278,672.6462278,-87.134298,29.058084,Female
+Edwards,@edwards_2014,"Edwards et al., 2014",Little Cayman,Caribbean,1887,0.000003,0.000003,-5.522878745,3.24,0.97,mm,g,total,27,391,Both,Yes*,15,30,2011,524.6887089,524.6887089,-80.029527,19.674865,Both
+Darling,@darling_2011,"Darling et al., 2011",Bahamas,Western Atlantic,,0.00497,2.54E-06,-2.303643611,3.291,NA,mm,g,total,NA,NA,Both,NA,NA,NA,NA,NA,NA,-77.939973,24.515707,Both
+Sabido,@sabidoitza_2016,"Sabido-Itza et al., 2016","Xcalak, Mexico",Caribbean,2143,7.95E-03,5.21E-06,-5.282832871,3.1832,0.9907,cm,g,total,25,375,Both,Yes*,0.5,57,2009-2012,653.7994147,653.7994147,-87.83942,18.23158,Both
+TH,@toledohernndez_2014,"Toledo-Hernández et al., 2014",Puerto Rico,Caribbean,227,8.00E-02,8.00E-06,-5.096910013,3.11,0.958,mm,g,total,57.09,349,Both,Yes*,1,30,2010 - 2011,NA,NA,-66.593035,18.296474,Both
+Sabido2BC,@sabidoitz_2016,"Sabido-Itza et al., 2016b","Banco Chinchorro, Mexico",Caribbean,449,4.10E-03,2.31E-06,-2.39E+00,3.25,0.97,mm,g,total,100,395,Both,Yes,,,2012-2013,,,-87.346968,18.604986,Both; BC
+Sabido2PX,@sabidoitz_2016,"Sabido-Itza et al., 2016b","Xcalak, Mexico",Caribbean,368,4.90E-03,3.16E-06,-2.31E+00,3.19,0.98,mm,g,total,60,380,Both,Yes,,,2012-2013,,,-87.83942,18.23158,Both; PNAX
+This,This study,This study,"Puerto Aventuras, Mexico",Caribbean,109,-5.494087,3.21E-06,-5.494087,3.234739,0.9766,mm,g,total,34,310,Both,No,5.7,38.1,2010,543.6371433,543.6371433,-87.4,20.5,Both
