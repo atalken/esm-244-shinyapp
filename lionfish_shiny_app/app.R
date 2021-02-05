@@ -13,12 +13,13 @@ library(shiny)
 library(bslib)
 library(here)
 
-read_csv(here("lionfish_shiny_app", "lionfish_data.csv"))
+lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv"))
 
 ui <- fluidPage(theme = "our_theme.css",
                 
                 navbarPage("THIS IS MY TITLE!",
-                           tabPanel("Tab 1",
+                           ####### Start Tab Panel 
+                           tabPanel("Select Box - fish diet -> output size",
                                     sidebarLayout(
                                         sidebarPanel("WIDGETS!",
                                                      checkboxGroupInput(inputId = "pick_species",
@@ -29,8 +30,36 @@ ui <- fluidPage(theme = "our_theme.css",
                                                   plotOutput("sw_plot"))
                                     )
                            ),
-                           tabPanel("Tab 2"),
-                           tabPanel("Tab 3")
+                           tabPanel("Slider Bar - fish depth -> fish weight",
+                                    sidebarLayout(
+                                        sidebarPanel("Age Widget",
+                                                     sliderInput(inputId = "select_age",
+                                                                 label = "Select Age Range",
+                                                                 min = 0, max = 900,
+                                                                 value = c(40, 60))),
+                                        mainPanel("Output", textOutput("age_character"))
+                                    )),
+                           tabPanel("Radio buttons - selecting site _> output spatial of lionfish occurence",
+                                    sidebarLayout(
+                                        sidebarPanel("select site",
+                                                     radioButtons("radio", label = h3("Radio buttons"),
+                                                                  choices = list("Choice 1" = 1,
+                                                                                 "Choice 2" = 2,
+                                                                                 "Choice 3" = 3), 
+                                                                  selected = 1)),
+                                        mainPanel("output", textOutput("output!"))
+                                        
+                                    )),
+                           tabPanel("Select Box - select prey -> output scatterplot fish weight vs item (prey) weight",
+                                    sidebarLayout(
+                                        sidebarPanel("select prey",
+                                                     selectInput("select", label = h3("Select box"), 
+                                                                 choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3), 
+                                                                 selected = 1)),
+                                        mainPanel("output", textOutput("output!"))
+                                    )
+                               
+                           )
                            
                 )
                 
