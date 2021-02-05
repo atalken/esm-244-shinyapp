@@ -1,0 +1,169 @@
+Id,Country,Site,Location,Latitude,Longitude,Date_dd/mm/yyyy,Time,Depth_m,T_C,TotalLength_cm,TotalWeigth_gr,StomachLength_cm,StomachWeight_gr,ItemNo,Item_Genus_species,Item_TotalLength_cm,Item_Weigth_gr,Notes
+001-Po-16/05/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,16/05/2010,10:56,38.1,28,21.3,112.7,7.2,7.7,1,unid,na,0.7,Isolated rock on sand patch
+002-Po-29/05/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,29/05/2010,10:14,27.9,28,12.4,27.6,3.8,0.3,1,Canthigaster_rostrata,2,1.1,
+003-Pd-29/05/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,29/05/2010,12:55,18.5,28,16.6,52.3,7.8,0.7,1,unid,na,1.8,
+004-Cs-12/06/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,12/06/2010,10:40,15.5,28,20.3,123.1,6.8,7.5,1,unid,na,0.3,Isolated rock on sand patch
+005-Cs-12/06/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,12/06/2010,10:45,15,28,21.2,129,5.6,6.5,1,Callinectes_sapidus,1.4,0.5,Isolated rock on sand patch
+005-Cs-12/06/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,12/06/2010,10:45,15,28,21.2,129,5.6,6.5,2,Callinectes_sapidus,1.3,0.4,Isolated rock on sand patch
+006-Pl-21/06/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,21/06/2010,11:34,22.7,29,21,138.75,6.2,10.15,1,Pterois_volaitans,1.7,0.15,Pregnant female
+006-Pl-21/06/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,21/06/2010,11:34,22.7,29,21,138.75,6.2,10.15,2,unid,1.5,0.1,Pregnant female
+007-Pl-21/06/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,21/06/2010,12:11,13.4,29,13.2,50.29,3.6,1.85,1,empty,0,0,
+008-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:07,18.5,29,12.2,17.2,2.6,1.1,1,unid,0.9,0.1,
+008-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:07,18.5,29,12.2,17.2,2.6,1.1,2,Malacoctenus_trinagulatus,2.2,0.1,
+008-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:07,18.5,29,12.2,17.2,2.6,1.1,3,Malacoctenus_trinagulatus,na,0.1,
+008-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:07,18.5,29,12.2,17.2,2.6,1.1,4,Malacoctenus_trinagulatus,na,0.1,
+009-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:08,18.2,29,22.4,112.7,6.1,8.5,1,Lysmata_sp,2.9,0.2,Pregnant female
+009-Po-04/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,04/07/2010,10:08,18.2,29,22.4,112.7,6.1,8.5,2,Lysmata_sp,2.2,0.2,Pregnant female
+010-Pd-08/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,08/07/2010,11:55,12.5,29,11.7,19.6,3.5,1.4,1,Cryptotomus_roseus,2.8,0.2,
+011-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:43,20.1,28,21.1,130.1,7.1,11.2,1,unid,3.8,0.5,Pregnant female
+011-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:43,20.1,28,21.1,130.1,7.1,11.2,2,unid,3.5,0.3,Pregnant female
+012-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:49,18.2,28,10.5,11.4,3,0.6,1,Apogon_spp.,1.5,0.1,
+012-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:49,18.2,28,10.5,11.4,3,0.6,2,Apogon_spp.,1.3,0.1,
+012-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:49,18.2,28,10.5,11.4,3,0.6,3,Apogon_spp.,1.5,0.1,
+012-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:49,18.2,28,10.5,11.4,3,0.6,4,Apogon_spp.,1.6,0.1,
+012-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,09:49,18.2,28,10.5,11.4,3,0.6,5,Apogon_spp.,1.5,0.1,
+013-Pd-09/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,09/07/2010,10:01,18.1,28,8.2,5.6,2.1,0.3,0,empty,0,0,
+014-Is-09/07/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,09/07/2010,11:41,14,28,6.3,2.3,1.1,0.1,1,Mysidium_spp,0.5,0.1,
+014-Is-09/07/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,09/07/2010,11:41,14,28,6.3,2.3,1.1,0.1,2,Mysidium_spp,0.4,0.1,
+015-Is-09/07/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,09/07/2010,12:00,14.7,28,5,0.9,0.9,0.1,1,Mysidium_spp,0.1,0.1,Juvenile
+016-Po-11/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,11/07/2010,09:51,19.9,28,6,1.7,1.4,0.2,0,empty,0,0,Inside barrel sponge
+017-Po-11/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,11/07/2010,09:53,19.7,28,7.6,4.7,2.7,0.4,1,Lysmata_sp,0.8,0.1,Inside barrel sponge
+017-Po-11/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,11/07/2010,09:53,19.7,28,7.6,4.7,2.7,0.4,2,Lysmata_sp,1.2,0.1,Inside barrel sponge
+017-Po-11/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,11/07/2010,09:53,19.7,28,7.6,4.7,2.7,0.4,3,Ophioblennius_atlanticus,2,0.1,Inside barrel sponge
+018-Po-11/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,11/07/2010,10:06,19.3,28,12.3,22.1,3.5,1.7,1,unid,na,0.3,Close to Mysidium spp swarm
+019-Po-12/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,12/07/2010,09:25,21.3,28,26.2,243.7,7.3,20.7,1,unid,4.2,2.1,
+019-Po-12/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,12/07/2010,09:25,21.3,28,26.2,243.7,7.3,20.7,2,unid,2.3,0.2,
+020-Po-12/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,12/07/2010,13:39,9.4,28,3.4,0.3,1.2,0.1,0,empty,0,0,
+021-Pd-13/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,13/07/2010,11:25,12.5,29,12.4,21.1,3.2,1.6,1,Lysmata_sp,2,0.2,
+021-Pd-13/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,13/07/2010,11:25,12.5,29,12.4,21.1,3.2,1.6,2,Apogon_spp.,2.3,0.3,
+022-Cs-14/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,14/07/2010,09:24,28.5,29,21.3,125.6,5.1,9.8,1,unid,2.5,0.8,"Close to Mysidium spp swarm, pregnant female"
+022-Cs-14/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,14/07/2010,09:24,28.5,29,21.3,125.6,5.1,9.8,2,Lysmata_sp,1.6,0.1,"Close to Mysidium spp swarm, pregnant female"
+023-Cs-14/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,14/07/2010,09:30,31.2,29,12.3,22.9,3.6,2,1,unid,1.8,0.1,Close to Mysidium spp swarm
+024-Cu-14/07/10,Mexico,PuertoAventuras,Cuevitas,20.477743,-87.243813,14/07/2010,11:35,7.4,29,11.6,18.6,3.1,1.3,1,unid,1.1,0.1,Close to Mysidium spp swarm
+025-Is-16/07/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,16/07/2010,09:30,18.2,28,15,34.4,5.2,2.8,1,Epinephelus_spp.,2.5,0.4,
+026-Is-16/07/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,16/07/2010,09:30,18.2,28,7.6,3.9,2.1,0.3,1,unid,0.5,0.1,
+027-Co-16/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,16/07/2010,11:25,12.5,28,5.8,2.1,1.9,0.4,1,unid,1.8,0.1,Close to Mysidium spp swarm
+028-Pg-17/07/10,Mexico,PuertoAventuras,Pedregal,20.50694444,-87.20388889,17/07/2010,09:54,14.9,28,14.2,34.7,4.1,2.3,1,Apogon_spp.,2.9,0.3,Close to Mysidium spp swarm
+029-Pg-17/07/10,Mexico,PuertoAventuras,Pedregal,20.50694444,-87.20388889,17/07/2010,10:00,14.4,28,12.3,19.9,4.9,1.6,0,empty,0,0,
+030-Pg-17/07/10,Mexico,PuertoAventuras,Pedregal,20.50694444,-87.20388889,17/07/2010,10:20,14.8,28,24.5,177.8,7.4,21.8,1,Mycteroperca_venenosa,7.8,6.5,Close to Mysidium spp swarm and Chromis cyanea school
+030-Pg-17/07/10,Mexico,PuertoAventuras,Pedregal,20.50694444,-87.20388889,17/07/2010,10:20,14.8,28,24.5,177.8,7.4,21.8,2,unid,3,0.7,Close to Mysidium spp swarm and Chromis cyanea school
+031-Cu-17/07/10,Mexico,PuertoAventuras,Cuevitas,20.477743,-87.243813,17/07/2010,12:23,12.6,28,12.9,22.4,3.4,1.6,1,unid,1.5,0.1,Close to Mysidium spp swarm
+031-Cu-17/07/10,Mexico,PuertoAventuras,Cuevitas,20.477743,-87.243813,17/07/2010,12:23,12.6,28,12.9,22.4,3.4,1.6,2,unid,1.1,0.1,Close to Mysidium spp swarm
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,1,Lysmata_sp,4.1,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,2,Lysmata_sp,1.2,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,3,Lysmata_sp,1.4,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,4,Lysmata_sp,1.6,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,5,Apogon_spp.,2.9,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,6,Chromis_multilineata,1.5,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+032-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:00,24.6,28,27.1,276.2,8.7,13.6,7,unid,0,0,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,1,unid,0,0,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,2,Lysmata_sp,2.8,0.2,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,3,Lysmata_sp,2.2,0.2,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,4,Lysmata_sp,1.8,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,5,Lysmata_sp,1.3,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+033-Ta-18/07/10,Mexico,Akumal,Tzimin-Ha,20.392828,-87.306619,18/07/2010,10:07,21.2,28,26.4,197.6,7.1,12,6,Lysmata_sp,0.5,0.1,Close to Mysidium spp swarm and Chromis cyanea school
+034-Ss-18-07-10,Mexico,PuertoAventuras,Santos,20.49305556,-87.22166667,18/07/2010,13:00,26.6,29,27.7,237.8,1.8,0.6,0,empty,0,0,
+035-Ss-18/07/10,Mexico,PuertoAventuras,Santos,20.49305556,-87.22166667,18/07/2010,13:00,5.7,29,6.4,2.6,8.2,15.4,1,unid,6.9,2.9,
+035-Ss-18/07/10,Mexico,PuertoAventuras,Santos,20.49305556,-87.22166667,18/07/2010,13:00,5.7,29,6.4,2.6,8.2,15.4,2,unid,4.9,0.8,
+036-Po-19/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,19/07/2010,09:33,15.3,29,13.6,22,3.7,1.6,1,unid,1.7,0.3,Close to Mysidium spp swarm and Chromis cyanea school
+037-Po-19/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,19/07/2010,09:37,14.5,29,13.6,27.9,3.8,2.4,1,unid,3.2,0.4,
+038-Cs-19/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,19/07/2010,09:30,18,29,8,5.7,2.4,0.9,1,Thalassoma_bifasciatum,3.1,0.3,
+039-Cs-19/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,19/07/2010,09:30,19,29,7.8,5,2.4,0.3,1,unid,1.2,0.1,
+040-Cs-19/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,19/07/2010,09:30,20,29,12.3,21.2,2.9,1.7,0,empty,0,0,
+041-Cs-19/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,19/07/2010,09:30,18,29,14.8,37.1,3.8,2.2,1,Lysmata_sp,2.1,0.1,Pregnant female
+042-Cu-21/07/10,Mexico,PuertoAventuras,Cuevitas,20.477743,-87.243813,21/07/2010,12:07,12.8,29,15.7,39.2,3.2,2.7,0,empty,0,0,Close to Mysidium spp swarm
+043-Cu-21/07/10,Mexico,PuertoAventuras,Cuevitas,20.477743,-87.243813,21/07/2010,12:12,12.1,29,6.5,2.5,2,0.1,0,empty,0,0,Close to Mysidium spp swarm
+044-Pd-21/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,22/07/2010,09:40,12.1,29,7.4,3.5,1.3,0.1,0,empty,0,0,Close to Mysidium spp swarm
+045-Pd-21/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,22/07/2010,09:45,12.1,29,7.9,4.4,2,0.1,1,Lysmata_sp,1.2,0.1,
+045-Pd-21/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,22/07/2010,09:45,12.1,29,7.9,4.4,2,0.1,2,Lysmata_sp,1.3,0.1,
+045-Pd-21/07/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,22/07/2010,09:45,12.1,29,7.9,4.4,2,0.1,3,Mysidium_spp,0.2,0.1,
+046-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.1,4.6,2.2,0.3,1,Mysidium_spp,0.6,0.1,
+046-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.1,4.6,2.2,0.3,2,Mysidium_spp,0.4,0.1,
+046-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.1,4.6,2.2,0.3,3,Mysidium_spp,0.2,0.1,
+046-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.1,4.6,2.2,0.3,4,Mysidium_spp,0.2,0.1,
+047-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.1,4.9,2.4,0.5,1,Gobiosoma_prochilos,2.3,0.1,
+048-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,15.3,40.9,3.3,3.3,1,Lysmata_sp,2,0.6,
+048-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,15.3,40.9,3.3,3.3,2,Lysmata_sp,1.5,0.2,
+049-Po-22/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,22/07/2010,14:02,12.1,29,8.5,5.5,1.7,0.3,0,empty,0,0,
+050-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,31,303.7,8.8,25.9,1,unid,4.7,2.8,Pregnant female
+051-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,14.8,29.7,3.4,2.1,1,Lysmata_sp,0.9,0.1,
+052-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,15.4,32.9,4.6,1.8,0,empty,0,0,
+053-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,21.7,93.9,5.6,8.7,0,empty,0,0,Close to Mysidium spp swarm
+054-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,9.8,7.6,2.5,0.4,1,Lysmata_sp,1.2,0.1,Close to Mysidium spp swarm
+055-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,10.6,6.4,2.3,0.4,0,empty,0,0,Close to Mysidium spp swarm
+056-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,23.4,129.5,5.2,6.2,0,empty,0,0,Pregnant female
+057-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,12.8,15.9,3.5,1,1,Mysidium_spp,0.3,0.1,
+057-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,12.8,15.9,3.5,1,2,Mysidium_spp,0.4,0.1,
+057-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,12.8,15.9,3.5,1,3,Mysidium_spp,0.2,0.1,
+058-Co-27/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,27/07/2010,15:10,30.5,29,10.5,10.8,2.4,0.6,1,Lysmata_sp,0.4,0.1,
+059-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:33,28.9,28,12.9,20,3.5,1.4,1,Lysmata_sp,2.9,0.3,
+060-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:38,29.4,28,25.6,227.2,8.2,17.6,1,unid,3.6,0.7,Close to Mysidium spp swarm
+061-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:45,24.7,28,25.5,196.6,6.4,14.9,1,Stegastes_partitus,6.2,5.1,Pregnant female
+062-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:45,24.7,28,10.5,10.6,1.8,0.6,0,empty,0,0,
+063-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:45,24.7,28,28.4,273,7.9,13.3,0,empty,0,0,
+064-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,09:55,25.4,28,14.5,33.7,3.5,2.4,1,unid,2.9,0.5,
+065Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,13:36,23.3,28,14.2,44.9,4.4,3.6,0,empty,0,0,
+066-Co-28/07/10,Mexico,PuertoAventuras,Castillo,20.49555556,-87.22,28/07/2010,13:59,26.9,28,15.5,42,6,2.6,1,Lysmata_sp,1.2,0.1,
+067-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:35,13.7,29,14.8,30.5,3.8,2.1,1,unid,2.2,0.1,Close to Mysidium spp swarm
+067-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:35,13.7,29,14.8,30.5,3.8,2.1,2,unid,1.4,0.1,Close to Mysidium spp swarm
+067-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:35,13.7,29,14.8,30.5,3.8,2.1,3,unid,1.2,0.1,Close to Mysidium spp swarm
+068-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:37,18.5,29,19.2,73.5,5.4,5.1,1,Lysmata_sp,2,0.3,Pregnant female
+069-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:39,14.2,29,16.8,46.5,4.1,3.6,1,Apogon_spp.,3.7,0.5,Close to Mysidium spp swarm
+070-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:41,15.3,29,9,6.8,2.7,0.4,0,empty,0,0,Close to Mysidium spp swarm
+071-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:43,18.7,29,14.8,34.6,5,4.3,1,Lysmata_sp,0.7,0.1,Close to Mysidium spp swarm
+071-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:43,18.7,29,14.8,34.6,5,4.3,2,Lysmata_sp,0.8,0.1,Close to Mysidium spp swarm
+071-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:43,18.7,29,14.8,34.6,5,4.3,3,Lysmata_sp,0.7,0.1,Close to Mysidium spp swarm
+071-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:43,18.7,29,14.8,34.6,5,4.3,4,Lysmata_sp,1.1,0.1,Close to Mysidium spp swarm
+072-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:45,11.3,29,15.5,39.2,4.4,2.8,1,Apogon_spp.,3,0.4,Close to Mysidium spp swarm
+073-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:47,12.9,29,17.6,81.7,5.2,5.9,0,empty,0,0,Pregnant female
+074-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:49,15.4,29,17,42.6,4.3,3.1,0,empty,0,0,Close to Mysidium spp swarm
+075-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:51,15.6,29,8.3,3.9,3.2,0.2,0,empty,0,0,Close to Mysidium spp swarm
+076-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:53,10.1,29,14.8,33.3,4,3.1,1,Liopropoma_carmabi,4.5,0.9,Close to Mysidium spp swarm
+077-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:55,13.8,29,12.1,17.1,4.8,1.4,1,Gonodactylus_smithii,3.2,0.3,Close to Mysidium spp swarm
+078-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:57,9.9,29,8.9,5.8,2.6,0.3,0,empty,0,0,Close to Mysidium spp swarm
+079-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,09:59,13.5,29,9.8,9.6,2.3,0.8,0,empty,0,0,Close to Mysidium spp swarm
+080-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,10:01,15.8,29,15.2,36.9,4.3,3.2,0,empty,0,0,Close to Mysidium spp swarm
+081-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,10:03,14.3,29,10.2,9.4,2.6,0.4,1,Lysmata_sp,0.7,0.1,Close to Mysidium spp swarm
+082-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,10:05,13.3,29,8.9,6.3,1.8,0.4,1,unid,1.8,0.1,Close to Mysidium spp swarm
+083-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,10:07,19.8,29,8.9,5,4.2,0.3,0,empty,0,0,Close to Mysidium spp swarm
+084-Pl-29/07/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,29/07/2010,10:09,16.8,29,9.6,7.9,3.8,0.2,0,empty,0,0,Close to Mysidium spp swarm
+085-Po-29/07/10,Mexico,PuertoAventuras,Paraiso,20.48361111,-87.22611111,29/07/2010,11:35,13.3,29,9.4,9.4,2.8,0.8,0,empty,0,0,
+086-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:32,23.4,29,23.9,105.1,4.1,8.8,1,Lysmata_sp,2,0.3,Pregnant female
+086-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:32,23.4,29,23.9,105.1,4.1,8.8,2,Lysmata_sp,1.8,0.2,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,1,Lysmata_sp,2.6,0.1,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,2,Lysmata_sp,2.3,0.1,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,3,Lysmata_sp,2,0.1,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,4,Lysmata_sp,1.5,0.1,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,5,Liopropoma_carmabi,3.9,0.7,Pregnant female
+087-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,27.2,194.1,7.5,27.8,6,Stegastes_partitus,7.8,7.5,Pregnant female
+088-Cs-30/07/10,Mexico,PuertoAventuras,Canones,20.47694444,-87.23277778,30/07/2010,09:36,24.6,29,29.2,397.7,13.2,17.5,1,Gramma_loreto,1.7,0.1,
+089-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:38,20.4,29,8.5,3.1,3,0.2,0,empty,0,0,Close to Mysidium spp swarm
+090-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:42,14.6,29,12.8,19.7,3.5,1.1,0,empty,0,0,Close to Mysidium spp swarm
+091-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:46,16.3,29,16.3,30.1,4.9,1.3,0,empty,0,0,Close to Mysidium spp swarm
+092-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:50,17.5,29,9.1,5.8,2.6,0.5,0,empty,0,0,Close to Mysidium spp swarm
+093-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:54,19.2,29,10.8,7.4,3.4,0.6,1,Lysmata_sp,1.3,0.1,Close to Mysidium spp swarm
+094-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,09:58,14.9,29,14.5,41.4,4.9,3.8,1,unid,1.9,0.1,Close to Mysidium spp swarm
+095-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,10:02,14.8,29,11.1,11,2.1,0.8,0,empty,0,0,Close to Mysidium spp swarm
+096-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,10:06,16.9,29,11.9,10.6,3.4,0.8,1,unid,1.6,0.1,Close to Mysidium spp swarm
+097-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,10:10,18.2,29,11.6,19.8,3.8,2.2,1,unid,1.7,0.1,Close to Mysidium spp swarm
+098-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,10:14,15.9,29,10.8,12.1,3.8,0.8,0,empty,0,0,Close to Mysidium spp swarm
+099-Pl-01/08/10,Mexico,PuertoAventuras,Paamul,20.51277778,-87.19194444,01/08/2010,10:18,12.9,29,11.9,8.5,3.1,0.6,0,empty,0,0,Close to Mysidium spp swarm
+100-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:33,17.3,29,16.4,38.2,4.9,3.2,1,unid,3.1,0.8,Close to Mysidium spp swarm
+101-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:37,18.2,29,9.3,8.2,1.7,0.6,1,unid,1.8,0.2,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,1,Mysidium_spp,0.8,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,2,Mysidium_spp,0.5,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,3,Mysidium_spp,0.6,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,4,Mysidium_spp,0.3,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,5,Mysidium_spp,0.9,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,6,Mysidium_spp,0.8,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,7,Mysidium_spp,0.7,0.1,Close to Mysidium spp swarm
+102-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:41,19.4,29,9.2,8.2,2.5,0.3,8,Mysidium_spp,0.4,0.1,Close to Mysidium spp swarm
+103-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:45,15.2,29,8.5,6.7,3.5,0.6,0,empty,0,0,Close to Mysidium spp swarm
+104-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:49,16.3,29,7.2,5.3,2.4,0.3,1,unid,1.1,1,Close to Mysidium spp swarm
+105-Is-01/08/10,Mexico,PuertoAventuras,Islas,20.49,-87.22805556,01/08/2010,13:53,15.9,29,6,1.6,1.1,0.1,0,empty,0,0,Close to Mysidium spp swarm
+106-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,09:37,21,30,11.6,12.2,4.8,1.3,2,Epinephelus_spp.,3.8,0.6,Close to Mysidium spp swarm
+106-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,09:37,21,30,11.6,12.2,4.8,1.3,2,Mysidium_spp,0.8,0.1,Close to Mysidium spp swarm
+107-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,09:57,18,30,15.8,42.4,3.5,2.1,2,Lysmata_sp,3,1.9,Close to Mysidium spp swarm
+107-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,09:57,18,30,15.8,42.4,3.5,2.1,2,Lysmata_sp,2.4,1.8,Close to Mysidium spp swarm
+108-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,10:14,15.6,30,22.5,126.7,6.4,6.5,0,empty,0,0,
+109-Pd-10/08/10,Mexico,PuertoAventuras,Pared,20.50166667,-87.21166667,10/08/2010,10:25,16.5,30,10.4,7,1.2,0.4,1,Malacoctenus_trinagulatus,2.5,0.1,Close to Chromis cyanea school
