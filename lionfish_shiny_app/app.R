@@ -13,9 +13,16 @@ library(shiny)
 library(bslib)
 library(here)
 
+my_bs_theme <- bs_theme(
+    bg = "darkseagreen",
+    fg = "honeydew",
+    primary = "white",
+    base_font = font_google("Questrial")
+)
+
 lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv"))
 
-ui <- fluidPage(theme = "our_theme.css",
+ui <- fluidPage(theme = my_bs_theme,
                 
                 navbarPage("THIS IS MY TITLE!",
                            ####### Start Tab Panel 
