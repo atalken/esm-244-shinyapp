@@ -112,7 +112,8 @@ ui <- fluidPage(theme = my_bs_theme,
 ############### End USER INTERFACE : START SERVER #############
 
 server <- function(input, output) {
-    ###### Tab 1 Reactive output #############
+   
+   ###### Tab 1 Reactive output #############
     diet_reactive <- reactive({
         
         lionfish %>%
