@@ -56,8 +56,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                      checkboxGroupInput(inputId = "pick_species",
                                                                         label = "Choose species:",
                                                                         choices = 
-                                                                          unique(lionfish$common_name),
-                                                                        value = "Unknown")
+                                                                          unique(lionfish$common_name))
                                         ),
                                         ###### TAB 1 OUTPUT#####
                                         mainPanel("Graph of lion fish length v weight RE diet!",

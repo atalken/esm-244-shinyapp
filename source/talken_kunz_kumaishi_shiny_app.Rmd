@@ -7,5 +7,19 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+Read in the lionfish data
+```{r}
+lionfish <- read.csv(here("data", "lionfish", "lionfish_data.csv")) %>% 
+  clean_names()
+```
+
+Read in the reserve data
+```{r}
+reserve <- read_csv(here("data", "marine_reserves", "fish_data.csv"))
 ```
 
