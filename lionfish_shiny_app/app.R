@@ -56,8 +56,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                      checkboxGroupInput(inputId = "pick_species",
                                                                         label = "Choose species:",
                                                                         choices = 
-                                                                          unique(lionfish$common_name),
-                                                                        value = "Unknown")
+                                                                          unique(lionfish$common_name))
                                         ),
                                         ###### TAB 1 OUTPUT#####
                                         mainPanel("Graph of lion fish length v weight RE diet!",
@@ -113,7 +112,8 @@ ui <- fluidPage(theme = my_bs_theme,
 ############### End USER INTERFACE : START SERVER #############
 
 server <- function(input, output) {
-    ###### Tab 1 Reactive output #############
+   
+   ###### Tab 1 Reactive output #############
     diet_reactive <- reactive({
         
         lionfish %>%
