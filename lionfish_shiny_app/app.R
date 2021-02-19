@@ -14,6 +14,7 @@ library(bslib)
 library(here)
 library(janitor)
 
+
 my_bs_theme <- bs_theme(
     bg = "darkseagreen",
     fg = "honeydew",
@@ -49,6 +50,7 @@ lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
 ui <- fluidPage(theme = my_bs_theme,
                 
                 navbarPage("THIS IS MY TITLE!",
+                           
                            ####### Start Tab 1 Panel ####
                            tabPanel("Select Box - fish diet -> output size",
                                     sidebarLayout(
@@ -67,29 +69,36 @@ ui <- fluidPage(theme = my_bs_theme,
                            
                            tabPanel("Slider Bar - fish depth -> fish weight",
                                     sidebarLayout(
-                                        sidebarPanel("Age Widget",
-                                                     sliderInput(inputId = "select_age",
-                                                                 label = "Select Age Range",
-                                                                 min = 0, max = 900,
-                                                                 value = c(40, 60))),
+                                        sidebarPanel("Depth Widget",
+                                                     sliderInput(inputId = "select_depth",
+                                                                 label = "Select Depth Range",
+                                                                 min = 0, max = 40,
+                                                                 value = c(5, 10))),
                                         
                                         ###### Start Tab 2 Output #####
                                         
-                                        mainPanel("Output", textOutput("age_character"))
+                                        mainPanel("Depth Output", plotOutput("depth_reactive"))
                                     )),
                            ############# End tab 2 ##### Start Tab 3 #########
                            
-                           tabPanel("Radio buttons - selecting site _> output spatial of lionfish occurence",
+                           tabPanel("Radio buttons - selecting site -> output spatial of lionfish occurence",
                                     sidebarLayout(
                                         sidebarPanel("select site",
                                                      radioButtons("radio", label = h3("Radio buttons"),
-                                                                  choices = list("Choice 1" = 1,
-                                                                                 "Choice 2" = 2,
-                                                                                 "Choice 3" = 3), 
-                                                                  selected = 1)),
+                                                                  choices = list("Paraiso" = "Paraiso",
+                                                                                 "Pared" = "Pared",
+                                                                                 "Paamul" = "Paamul",
+                                                                                 "Canones" = "Canones",
+                                                                                 "Islas" = "Islas",
+                                                                                 "Cuevitas" = "Cuevitas",
+                                                                                 "Castillo" = "Castillo",
+                                                                                 "Pedregal" = "Pedregal",
+                                                                                 "Tzimin-Ha" ="Tzimin-Ha",
+                                                                                 "Santos" = "Santos"), 
+                                                                  selected = "Paraiso")),
                                         ########## Tab 3 Output ###############
                                         
-                                        mainPanel("output", textOutput("output!"))
+                                        mainPanel("output", plotOutput("tmap!"))
                                         
                                     )),
                            ########### End tab 3 #### Start Tab 4 ######
@@ -122,11 +131,24 @@ server <- function(input, output) {
     })
     
     output$diet_plot <- renderPlot(
-        ggplot(data = diet_reactive(), aes(x = total_length_cm, y = total_weight_gr)) +
+        ggplot(data = diet_reactive(), aes(x = total_length_cm, y = total_weigth_gr)) +
             geom_point(aes(color = common_name))
     )
   ### End tab 1 Reactive output#### 
     
+    
+    depth_reactive <- reactive({
+      
+      lionfish %>%
+        filter(depth_m %in% input$select_depth)
+      
+    })
+    
+    output$depth_plot <- renderPlot(
+      ggplot(data = depth_reactive(), aes(x = depth_m, y = total_weigth_gr)) +
+        geom_point()
+    )
+    ######## End tab 2 Reactive output###########
 }
 
 shinyApp(ui = ui, server = server)
