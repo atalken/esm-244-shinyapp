@@ -56,31 +56,25 @@ ui <- fluidPage(theme = my_bs_theme,
                                     sidebarLayout(
                                         sidebarPanel("WIDGETS!",
                                                      checkboxGroupInput(inputId = "pick_species",
-                                                                        label = "Choose species:",
+                                                                        label = "Choose prey species:",
                                                                         choices = 
                                                                           unique(lionfish$common_name))
                                         ),
-                                        ###### TAB 1 OUTPUT#####
                                         mainPanel("Graph of lion fish length v weight RE diet!",
                                                   plotOutput("diet_plot"))
-                                    )
-                           ),
-                           ########  END TAB 1 ##### Start Tab 2#####
-                           
+                                        )
+                                    ),
                            tabPanel("Slider Bar - fish depth -> fish weight",
                                     sidebarLayout(
                                         sidebarPanel("Depth Widget",
                                                      sliderInput(inputId = "select_depth",
                                                                  label = "Select Depth Range",
                                                                  min = 0, max = 40,
-                                                                 value = c(5, 10))),
-                                        
-                                        ###### Start Tab 2 Output #####
-                                        
+                                                                 value = c(5, 10))
+                                         ),
                                         mainPanel("Depth Output", plotOutput("depth_reactive"))
-                                    )),
-                           ############# End tab 2 ##### Start Tab 3 #########
-                           
+                                        )
+                                    ),
                            tabPanel("Radio buttons - selecting site -> output spatial of lionfish occurence",
                                     sidebarLayout(
                                         sidebarPanel("select site",
@@ -132,7 +126,11 @@ server <- function(input, output) {
     
     output$diet_plot <- renderPlot(
         ggplot(data = diet_reactive(), aes(x = total_length_cm, y = total_weigth_gr)) +
-            geom_point(aes(color = common_name))
+            geom_point(aes(color = common_name)) +
+          theme_minimal() +
+          labs(title = "Title",
+               x = "Length (cm)",
+               y = "Weight (g)")
     )
   ### End tab 1 Reactive output#### 
     

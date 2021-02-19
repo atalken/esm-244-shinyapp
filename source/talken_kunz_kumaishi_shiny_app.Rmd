@@ -14,12 +14,35 @@ library(janitor)
 
 Read in the lionfish data
 ```{r}
-lionfish <- read.csv(here("data", "lionfish", "lionfish_data.csv")) %>% 
-  clean_names()
+lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>% 
+    clean_names() %>% 
+    mutate(common_name = case_when(
+        item_genus_species == "unid" ~ "Unknown", # CHECK THIS???
+        item_genus_species == "Pterois_volaitans" ~ "Red Lionfish",
+        item_genus_species == "Lysmata_sp" ~ "Peppermint Shrimp",
+        item_genus_species == "Mysidium_spp" ~ "Mysid Shrimp", #check
+        item_genus_species == "Mycteroperca_venenosa" ~ "Yellofin grouper",
+        item_genus_species == "Gobiosoma_prochilos" ~ "Gobiosoma prochilos", #couldnt find it
+        item_genus_species == "Gonodactylus_smithii" ~ "Purple Spot Manits Shrimp",
+        item_genus_species == "Canthigaster_rostrata"~ "Sharpnose Puffer",
+        item_genus_species == "empty" ~ "Empty",
+        item_genus_species == "Cryptotomus_roseus" ~ "Bluelip Parrotfish",
+        item_genus_species == "Ophioblennius_atlanticus" ~ "Redlip Blenny",
+        item_genus_species == "Chromis_multilineata" ~ "Brown Chromis",
+        item_genus_species == "Stegastes_partitus" ~ "Bicolor Damselfish",
+        item_genus_species == "Gramma_loreto" ~ "Royal Gramma",
+        item_genus_species == "Callinectes_sapidus" ~ "Chesapeake Blue Crab",
+        item_genus_species == "Malacoctenus_trinagulatus" ~ "Saddle Blenny",
+        item_genus_species == "Apogon_spp." ~ "Cardinalfish",
+        item_genus_species == "Epinephelus_spp." ~ "Predatory Ray-Finned Fish", # better name???
+        item_genus_species == "Thalassoma_bifasciatum" ~ "Blueheaded Wrasse",
+        item_genus_species == "Liopropoma_carmabi" ~ "Candy Basslet"
+    ))
 ```
 
-Read in the reserve data
+
 ```{r}
-reserve <- read_csv(here("data", "marine_reserves", "fish_data.csv"))
+ggplot(data = lionfish, aes(x = depth_m, y = total_weigth_gr)) +
+            geom_point(aes(color = common_name))
 ```
 
