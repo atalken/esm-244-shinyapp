@@ -50,8 +50,28 @@ lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
 ui <- fluidPage(theme = my_bs_theme,
                 
                 navbarPage("THIS IS MY TITLE!",
+                 
                            
-                           ####### Start Tab 1 Panel ####
+                           ### Home Page###
+                           tabPanel("Home Page"),
+                           
+                           
+                           ########### TAB 1 species info ######
+                           
+                           tabPanel("Select Box - select species -> output information about species",
+                                    sidebarLayout(
+                                      sidebarPanel("select prey",
+                                                   selectInput("select", label = h3("Select box"), 
+                                                               choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3), 
+                                                               selected = 1)),
+                                      mainPanel("output", textOutput("output!"))
+                                    )
+                                    
+                           ),
+                           
+                           
+                        
+                           #######  Tab 2  ####
                            tabPanel("Select Box - fish diet -> output size",
                                     sidebarLayout(
                                         sidebarPanel("WIDGETS!",
@@ -65,7 +85,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                         )
                                     ),
                           
-                          ####### Start Tab 2
+                          ####### Tab 3
                            tabPanel("Slider Bar - fish depth -> fish weight",
                                     sidebarLayout(
                                         sidebarPanel("Depth Widget",
@@ -78,31 +98,18 @@ ui <- fluidPage(theme = my_bs_theme,
                                         )
                                     ),
                            
-                          ######## Start Tab 3
+                          ######## Tab 4
                            tabPanel("Radio buttons - selecting site -> output spatial of lionfish occurence",
                                     sidebarLayout(
                                         sidebarPanel("select site",
                                                      radioButtons("radio", label = h3("Radio buttons"),
                                                                   choices = unique(lionfish$location), 
                                                                   selected = "Paraiso")),
-                                        ########## Tab 3 Output ###############
-                                        
+                                  
                                         mainPanel("output", plotOutput("tmap!"))
                                         
-                                    )),
-                           ########### End tab 3 #### Start Tab 4 ######
-                           
-                           tabPanel("Select Box - select species -> output information about species",
-                                    sidebarLayout(
-                                        sidebarPanel("select prey",
-                                                     selectInput("select", label = h3("Select box"), 
-                                                                 choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3), 
-                                                                 selected = 1)),
-                                        #### Tab 4 Output ######
-                                        mainPanel("output", textOutput("output!"))
-                                    )
-                               
-                           )
+                                    ))
+
                            
                 )
                 
@@ -110,8 +117,11 @@ ui <- fluidPage(theme = my_bs_theme,
 ############### End USER INTERFACE : START SERVER #############
 
 server <- function(input, output) {
-   
-   ###### Tab 1 Reactive output #############
+  
+  ### Tab 1 Reactive output 
+  
+  
+   ###### Tab 2 Reactive output #############
     diet_reactive <- reactive({
         
         lionfish %>%
@@ -127,7 +137,7 @@ server <- function(input, output) {
                x = "Length (cm)",
                y = "Weight (g)")
     )
-  ### End tab 1 Reactive output#### 
+  ### Tab 3 Reactive outputt#### 
     
     
     depth_reactive <- reactive({
@@ -142,7 +152,7 @@ server <- function(input, output) {
       ggplot(data = depth_reactive(), aes(x = depth_m, y = total_weigth_gr)) +
         geom_point()
     )
-    ######## End tab 2 Reactive output###########
+    ######## Tab 4 reactive output###########
 }
 
 shinyApp(ui = ui, server = server)
