@@ -64,6 +64,8 @@ ui <- fluidPage(theme = my_bs_theme,
                                                   plotOutput("diet_plot"))
                                         )
                                     ),
+                          
+                          ####### Start Tab 2
                            tabPanel("Slider Bar - fish depth -> fish weight",
                                     sidebarLayout(
                                         sidebarPanel("Depth Widget",
@@ -72,23 +74,16 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                  min = 0, max = 40,
                                                                  value = c(5, 10))
                                          ),
-                                        mainPanel("Depth Output", plotOutput("depth_reactive"))
+                                        mainPanel("Depth Output", plotOutput("depth_plot"))
                                         )
                                     ),
+                           
+                          ######## Start Tab 3
                            tabPanel("Radio buttons - selecting site -> output spatial of lionfish occurence",
                                     sidebarLayout(
                                         sidebarPanel("select site",
                                                      radioButtons("radio", label = h3("Radio buttons"),
-                                                                  choices = list("Paraiso" = "Paraiso",
-                                                                                 "Pared" = "Pared",
-                                                                                 "Paamul" = "Paamul",
-                                                                                 "Canones" = "Canones",
-                                                                                 "Islas" = "Islas",
-                                                                                 "Cuevitas" = "Cuevitas",
-                                                                                 "Castillo" = "Castillo",
-                                                                                 "Pedregal" = "Pedregal",
-                                                                                 "Tzimin-Ha" ="Tzimin-Ha",
-                                                                                 "Santos" = "Santos"), 
+                                                                  choices = unique(lionfish$location), 
                                                                   selected = "Paraiso")),
                                         ########## Tab 3 Output ###############
                                         
@@ -97,7 +92,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                     )),
                            ########### End tab 3 #### Start Tab 4 ######
                            
-                           tabPanel("Select Box - select prey -> output scatterplot fish weight vs item (prey) weight",
+                           tabPanel("Select Box - select species -> output information about species",
                                     sidebarLayout(
                                         sidebarPanel("select prey",
                                                      selectInput("select", label = h3("Select box"), 
@@ -138,7 +133,8 @@ server <- function(input, output) {
     depth_reactive <- reactive({
       
       lionfish %>%
-        filter(depth_m %in% input$select_depth)
+        filter(depth_m >= input$select_depth[1]) %>% 
+        filter(depth_m <= input$select_depth[2])
       
     })
     
