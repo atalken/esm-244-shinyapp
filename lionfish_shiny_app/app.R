@@ -14,14 +14,16 @@ library(bslib)
 library(here)
 library(janitor)
 
-
+# Create the theme
 my_bs_theme <- bs_theme(
     bg = "darkseagreen",
     fg = "honeydew",
     primary = "white",
-    base_font = font_google("Questrial")
+    base_font = font_google("Lato"),
+    heading_font = font_google("Merriweather")
 )
 
+# Read in the data
 lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>% 
     clean_names() %>% 
     mutate(common_name = case_when(
@@ -49,21 +51,29 @@ lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
 
 ui <- fluidPage(theme = my_bs_theme,
                 
-                navbarPage("THIS IS MY TITLE!",
+                navbarPage("Lionfish in the Mexican Carribean",
                  
                            
                            ### Home Page###
-                           tabPanel("Home Page"),
+                           tabPanel("Home Page", mainPanel("Welcome! Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Juan Carlos Villasenor along the central Mexican Carribean coast in 2010. In this app, you will be able to explore the following:
+                                                           * Descriptions and photos of the observed lionfish prey species
+                                                           * The association between lionfish prey and the size of the lionfish
+                                                           * The relationship between observed depth of lionfish and their weight
+                                                           * An interactive spatial map depicting lionfish occurences based on the sampling site.
+                                                           Data Citation: 
+                                                           
+                                                           Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken
+                                                           ", textOutput("output"))
+                                    ),
                            
                            
                            ########### TAB 1 species info ######
                            
-                           tabPanel("Select Box - select species -> output information about species",
+                           tabPanel("Prey Descriptions",
                                     sidebarLayout(
                                       sidebarPanel("select prey",
                                                    selectInput("select", label = h3("Select box"), 
-                                                               choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3), 
-                                                               selected = 1)),
+                                                               choices = unique(lionfish$common_name))),
                                       mainPanel("output", textOutput("output!"))
                                     )
                                     
@@ -72,7 +82,7 @@ ui <- fluidPage(theme = my_bs_theme,
                            
                         
                            #######  Tab 2  ####
-                           tabPanel("Select Box - fish diet -> output size",
+                           tabPanel("Body Size to Prey Choice",
                                     sidebarLayout(
                                         sidebarPanel("WIDGETS!",
                                                      checkboxGroupInput(inputId = "pick_species",
@@ -80,15 +90,15 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                         choices = 
                                                                           unique(lionfish$common_name))
                                         ),
-                                        mainPanel("Graph of lion fish length v weight RE diet!",
+                                        mainPanel("A comparison of lionfish size (in length and weight) to their selected prey species",
                                                   plotOutput("diet_plot"))
                                         )
                                     ),
                           
                           ####### Tab 3
-                           tabPanel("Slider Bar - fish depth -> fish weight",
+                           tabPanel("Fish Weight at Varying Depths",
                                     sidebarLayout(
-                                        sidebarPanel("Depth Widget",
+                                        sidebarPanel(
                                                      sliderInput(inputId = "select_depth",
                                                                  label = "Select Depth Range",
                                                                  min = 0, max = 40,
@@ -99,7 +109,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                     ),
                            
                           ######## Tab 4
-                           tabPanel("Radio buttons - selecting site -> output spatial of lionfish occurence",
+                           tabPanel("Interactive Spatial Map",
                                     sidebarLayout(
                                         sidebarPanel("select site",
                                                      radioButtons("radio", label = h3("Radio buttons"),
@@ -133,8 +143,7 @@ server <- function(input, output) {
         ggplot(data = diet_reactive(), aes(x = total_length_cm, y = total_weigth_gr)) +
             geom_point(aes(color = common_name)) +
           theme_minimal() +
-          labs(title = "Title",
-               x = "Length (cm)",
+          labs(x = "Length (cm)",
                y = "Weight (g)")
     )
   ### Tab 3 Reactive outputt#### 
@@ -150,7 +159,10 @@ server <- function(input, output) {
     
     output$depth_plot <- renderPlot(
       ggplot(data = depth_reactive(), aes(x = depth_m, y = total_weigth_gr)) +
-        geom_point()
+        geom_point() +
+        theme_minimal()+
+        labs(x = "Depth (m)",
+             y = "Lionfish weight (g)")
     )
     ######## Tab 4 reactive output###########
 }
