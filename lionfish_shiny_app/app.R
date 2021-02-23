@@ -13,6 +13,7 @@ library(shiny)
 library(bslib)
 library(here)
 library(janitor)
+library(tmap)
 
 # Create the theme
 my_bs_theme <- bs_theme(
@@ -112,11 +113,11 @@ ui <- fluidPage(theme = my_bs_theme,
                            tabPanel("Interactive Spatial Map",
                                     sidebarLayout(
                                         sidebarPanel("select site",
-                                                     radioButtons("radio", label = h3("Radio buttons"),
+                                                     radioButtons(inputId = "select_location", label = h3("Select Location"),
                                                                   choices = unique(lionfish$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("output", plotOutput("tmap!"))
+                                        mainPanel("Observations of Lionfish by location", plotOutput("location_plot"))
                                         
                                     ))
 
@@ -165,6 +166,20 @@ server <- function(input, output) {
              y = "Lionfish weight (g)")
     )
     ######## Tab 4 reactive output###########
-}
+
+   spatial_reactive <- reactive({
+    
+      lionfish %>% 
+       select(location, latitude, longitude, common_name, date_dd_mm_yyyy) %>% 
+       filter(location %in% input$select_location)
+     
+     output$location_plot<- renderPlot(
+       ggplot() +
+         geom_point(data = spatial_reactive(), aes(x = lat, y = long)) 
+     ) # NEED TO MAKE IT SF, ALSO NEED TO DO SOMETHING DIFF FOR TMAP ILL LOOK DEEPER
+   }) 
+    
+    
+    }
 
 shinyApp(ui = ui, server = server)
