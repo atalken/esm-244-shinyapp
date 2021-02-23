@@ -53,54 +53,50 @@ ui <- fluidPage(theme = my_bs_theme,
                 
                 navbarPage("Lionfish in the Mexican Carribean",
                  
+                           ##### Home Page ######
                            
-                           ### Home Page###
-                           tabPanel("Home Page", mainPanel("Welcome! Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Juan Carlos Villasenor along the central Mexican Carribean coast in 2010. In this app, you will be able to explore the following:
-                                                           * Descriptions and photos of the observed lionfish prey species
-                                                           * The association between lionfish prey and the size of the lionfish
-                                                           * The relationship between observed depth of lionfish and their weight
-                                                           * An interactive spatial map depicting lionfish occurences based on the sampling site.
+                           tabPanel("Home Page", mainPanel("Welcome! Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010. In this app, you will be able to explore the following:
+                                                          
+                                                            1) Descriptions and photos of the observed lionfish prey species,
+                                                            2) The association between lionfish prey and the size of the lionfish,
+                                                            3) The relationship between observed depth of lionfish and their weight,
+                                                            4) An interactive spatial map depicting lionfish occurences based on the sampling site.
                                                            Data Citation: 
                                                            
                                                            Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken
                                                            ", textOutput("output"))
                                     ),
                            
-                           
-                           ########### TAB 1 species info ######
+                           ##### Tab 1 #####
                            
                            tabPanel("Prey Descriptions",
                                     sidebarLayout(
-                                      sidebarPanel("select prey",
-                                                   selectInput("select", label = h3("Select box"), 
+                                      sidebarPanel(selectInput("select_prey", label = h5("Select prey species:"), 
                                                                choices = unique(lionfish$common_name))),
-                                      mainPanel("output", textOutput("output!"))
+                                      mainPanel(textOutput("output!"),
+                                                imageOutput("img1"))
                                     )
-                                    
                            ),
                            
+                           #####  Tab 2  #####
                            
-                        
-                           #######  Tab 2  ####
                            tabPanel("Body Size to Prey Choice",
                                     sidebarLayout(
-                                        sidebarPanel("WIDGETS!",
-                                                     checkboxGroupInput(inputId = "pick_species",
-                                                                        label = "Choose prey species:",
-                                                                        choices = 
-                                                                          unique(lionfish$common_name))
+                                        sidebarPanel(checkboxGroupInput(inputId = "pick_species",
+                                                                        label = h5("Choose prey species:"),
+                                                                        choices = unique(lionfish$common_name))
                                         ),
                                         mainPanel("A comparison of lionfish size (in length and weight) to their selected prey species",
                                                   plotOutput("diet_plot"))
                                         )
                                     ),
                           
-                          ####### Tab 3
+                          ##### Tab 3 #####
+                          
                            tabPanel("Fish Weight at Varying Depths",
                                     sidebarLayout(
-                                        sidebarPanel(
-                                                     sliderInput(inputId = "select_depth",
-                                                                 label = "Select Depth Range",
+                                        sidebarPanel(sliderInput(inputId = "select_depth",
+                                                                 label = h5("Select depth range:"),
                                                                  min = 0, max = 40,
                                                                  value = c(5, 10))
                                          ),
@@ -108,30 +104,38 @@ ui <- fluidPage(theme = my_bs_theme,
                                         )
                                     ),
                            
-                          ######## Tab 4
+                          ##### Tab 4 #####
+                          
                            tabPanel("Interactive Spatial Map",
                                     sidebarLayout(
-                                        sidebarPanel("select site",
-                                                     radioButtons("radio", label = h3("Radio buttons"),
+                                        sidebarPanel(radioButtons("radio", 
+                                                                  label = h5("Select site:"),
                                                                   choices = unique(lionfish$location), 
                                                                   selected = "Paraiso")),
                                   
                                         mainPanel("output", plotOutput("tmap!"))
-                                        
                                     ))
-
-                           
                 )
-                
 )
-############### End USER INTERFACE : START SERVER #############
+
+#################### End USER INTERFACE : START SERVER ####################
 
 server <- function(input, output) {
   
-  ### Tab 1 Reactive output 
+  ##### Tab 1 Reactive output #####
   
+    output$img1 <- renderUI({
+      if(input$select_prey == "Peppermint Shrimp"){
+        img(height = 240, width = 300, src = 'peppermint_shrimp.png')}
+      else if(input$select_prey == "Mysid Shrimp"){
+        img(height = 240, width = 300, src = 'mysid_shrimp.png')}
+      else if(input$select_prey == "Cardinalfish"){
+        img(height = 240, width = 300, src = 'cardinalfish.png')}
+      }
+    )
   
-   ###### Tab 2 Reactive output #############
+  ##### Tab 2 Reactive output #####
+    
     diet_reactive <- reactive({
         
         lionfish %>%
@@ -146,8 +150,8 @@ server <- function(input, output) {
           labs(x = "Length (cm)",
                y = "Weight (g)")
     )
-  ### Tab 3 Reactive outputt#### 
-    
+  
+  ##### Tab 3 Reactive output ##### 
     
     depth_reactive <- reactive({
       
@@ -164,7 +168,11 @@ server <- function(input, output) {
         labs(x = "Depth (m)",
              y = "Lionfish weight (g)")
     )
-    ######## Tab 4 reactive output###########
+    
+    ##### Tab 4 reactive output #####
+    
+    
+    
 }
 
 shinyApp(ui = ui, server = server)
