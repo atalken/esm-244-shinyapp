@@ -48,7 +48,12 @@ lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
         item_genus_species == "Epinephelus_spp." ~ "Predatory Ray-Finned Fish", # better name???
         item_genus_species == "Thalassoma_bifasciatum" ~ "Blueheaded Wrasse",
         item_genus_species == "Liopropoma_carmabi" ~ "Candy Basslet"
-    ))
+    )) %>% 
+  mutate(prey_info = case_when(
+    common_name == "Peppermint Shrimp" ~ "Peppermint shrimp are native to the Gulf of Mexico and are small shrimp that are aptly named for their red striped bodies. They are detritus feeders and typically eat decomposing material in the ocean.",
+    common_name == "Mysid Shrimp" ~ "These small crustaceans are found in a variety of ecosystems but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they feed mainly on algae and other detritus.",
+    common_name == "Cardinalfish" ~ "Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable.",
+    common_name == "Saddle Blenny" ~ "The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs."))
 
 ui <- fluidPage(theme = my_bs_theme,
                 
@@ -82,7 +87,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                selected = "pep"),
                                                                ),
                                       mainPanel(uiOutput("img1"),
-                                                textOutput("output!"))
+                                                textOutput("description"))
                                     )
                            ),
                            
@@ -145,6 +150,20 @@ server <- function(input, output) {
         img(height = "75%", width = "75%", src = 'https://www.petmd.com/sites/default/files/Labrisomid-Saddl-Blenny%209990733.jpg')}
       }
     )
+    
+    output$description <- renderText({
+      if( input$select_prey=="pep") {
+        ("Peppermint shrimp are native to the Gulf of Mexico. These small shrimp are aptly named for their red striped bodies. They are detritus feeders and typically eat anemones and other decomposing material.")
+      }
+      else if (input$select_prey=="mys") {
+        ("These small crustaceans are found in a variety of marine ecosystems, but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they can be found feeding mainly on algae and other detritus.")
+      }
+      else if (input$select_prey=="car") {
+        ("Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable.")
+      }
+      else if(input$select_prey=="sad") {
+        ("The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs.")
+      }})
   
   ##### Tab 2 Reactive output #####
     
