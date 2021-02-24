@@ -63,16 +63,19 @@ ui <- fluidPage(theme = my_bs_theme,
                  
                            ##### Home Page ######
                            
-                           tabPanel("Home Page", mainPanel("Welcome! Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010. In this app, you will be able to explore the following:
+                           tabPanel("Home Page", mainPanel(h3("Welcome!"), 
+                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
+                                                           p("In this app, you will be able to explore the following:"),
                                                           
-                                                            1) Descriptions and photos of the observed lionfish prey species,
-                                                            2) The association between lionfish prey and the size of the lionfish,
-                                                            3) The relationship between observed depth of lionfish and their weight,
-                                                            4) An interactive spatial map depicting lionfish occurences based on the sampling site.
-                                                           Data Citation: 
+                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
+                                                            p("2) The association between lionfish prey and the size of the lionfish"),
+                                                            p("3) The relationship between observed depth of lionfish and their weight"),
+                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
                                                            
-                                                           Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken
-                                                           ", textOutput("output"))
+                                                           h5("Data Citation: "),
+                                                           
+                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
+                                                          textOutput("output"))
                                     ),
                            
                            ##### Tab 1 #####
