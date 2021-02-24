@@ -14,6 +14,7 @@ library(bslib)
 library(here)
 library(janitor)
 library(tmap)
+library(sf)
 
 tmap_mode("view")
 
@@ -213,13 +214,14 @@ server <- function(input, output) {
        count(location, latitude, longitude) %>% 
        st_as_sf(., coords=c("longitude", "latitude"), crs = 4483) %>% 
        filter(location %in% input$select_site)
+   })
      
-     output$location_plot<- renderTmap(
+     output$location_plot<- renderTmap({
        tm_shape(spatial_reactive())+
          tm_dots()+
          tm_basemap("OpenStreetMap")
-     ) 
-   }) 
+     }) 
+    
     
   
     }
