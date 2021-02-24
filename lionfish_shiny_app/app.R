@@ -74,7 +74,8 @@ ui <- fluidPage(theme = my_bs_theme,
                                                             p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
                                                            img(src = "lionfish_image.png", height = "75%", width = "75%"),
                                                            
-                                                           h5("Data Citation: "),
+                                                           h5("Data Citation:"),
+                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
                                                            
                                                            h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
                                                           textOutput("output"))
