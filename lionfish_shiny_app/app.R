@@ -72,6 +72,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                             p("2) The association between lionfish prey and the size of the lionfish"),
                                                             p("3) The relationship between observed depth of lionfish and their weight"),
                                                             p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
+                                                           img(src = "lionfish_image.png", height = "75%", width = "75%"),
                                                            
                                                            h5("Data Citation: "),
                                                            
