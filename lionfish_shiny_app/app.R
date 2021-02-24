@@ -15,6 +15,8 @@ library(here)
 library(janitor)
 library(tmap)
 
+tmap_mode("view")
+
 # Create the theme
 my_bs_theme <- bs_theme(
     bg = "darkseagreen",
@@ -121,13 +123,12 @@ ui <- fluidPage(theme = my_bs_theme,
                           
                            tabPanel("Interactive Spatial Map",
                                     sidebarLayout(
-
-                                       sidebarPanel(radioButtons("radio", 
-                                                                  label = h5("Select site:"),
+                                       sidebarPanel(radioButtons(inputId = "select_site", 
+                                                                  label = h5("Select Site:"),
                                                                   choices = unique(lionfish$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("Observations of Lionfish by location", plotOutput("location_plot"))
+                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"))
                                         
                                     ))
                 )
@@ -205,13 +206,16 @@ server <- function(input, output) {
    spatial_reactive <- reactive({
     
       lionfish %>% 
-       select(location, latitude, longitude, common_name, date_dd_mm_yyyy) %>% 
-       filter(location %in% input$select_location)
+       select(latitude, longitude, location) %>% 
+       count(location, latitude, longitude) %>% 
+       st_as_sf(., coords=c("longitude", "latitude"), crs = 4483) %>% 
+       filter(location %in% input$select_site)
      
-     output$location_plot<- renderPlot(
-       ggplot() +
-         geom_point(data = spatial_reactive(), aes(x = lat, y = long)) 
-     ) # NEED TO MAKE IT SF, ALSO NEED TO DO SOMETHING DIFF FOR TMAP ILL LOOK DEEPER
+     output$location_plot<- renderTmap(
+       tm_shape(spatial_reactive())+
+         tm_dots()+
+         tm_basemap("OpenStreetMap")
+     ) 
    }) 
     
   
