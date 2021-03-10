@@ -103,17 +103,17 @@ ui <- fluidPage(theme = my_bs_theme,
                                                            p("In this app, you will be able to explore the following:"),
                                                           
 
-                                                            p("1) Descriptions and photos of the observed lionfish prey species", align = "center"),
-                                                            p("2) The association between lionfish prey and the size of the lionfish", align = "center"),
-                                                            p("3) The relationship between observed depth of lionfish and their weight", align = "center"),
-                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site", align = "center"),
-                                                           HTML('<center><img src="lionfish.jpg" width="400"></center>'),
+                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
+                                                            p("2) The association between lionfish prey and the size of the lionfish"),
+                                                            p("3) The relationship between observed depth of lionfish and their weight"),
+                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
+                                                           HTML('<center><img src="lionfish.jpg" width="600"></center>'),
                                                            p("Photo by: Michael Aston", align = "center"),
-                                                           h5("Data Citation:", align = "center"),
-                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data", center = "align"),
+                                                           h5("Data Citation:"),
+                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
 
                                                            
-                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
+                                                           h6(em("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken")),
                                                           textOutput("output"))
                                     )),
                            
