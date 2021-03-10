@@ -139,8 +139,9 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                         label = h5("Choose prey species:"),
                                                                         choices = unique(lionfish$common_name))
                                         ),
-                                        mainPanel("A comparison of lionfish size (in length and weight) to their selected prey species",
-                                                  plotOutput("diet_plot"))
+                                        mainPanel("Lionfish Size and Weight Analysis",
+                                                  plotOutput("diet_plot"),
+                                                  "description")
                                         )
                                     ),
                           
@@ -153,7 +154,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                  min = 0, max = 40,
                                                                  value = c(5, 10))
                                          ),
-                                        mainPanel("Depth Output", plotOutput("depth_plot"))
+                                        mainPanel("Lionfish Depth Analysis", plotOutput("depth_plot"), "description")
                                         )
                                     ),
                            
@@ -166,7 +167,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                   choices = unique(lionfish_spatial$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"))
+                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"), "description")
                                         
                                     ))
                 )
@@ -218,7 +219,9 @@ server <- function(input, output) {
             geom_point(aes(color = common_name)) +
           theme_minimal() +
           labs(x = "Length (cm)",
-               y = "Weight (g)")
+               y = "Weight (g)",
+               title = "Lionfish Size vs Weight",
+               color = "Prey Species")
     )
   
   ##### Tab 3 Reactive output ##### 
