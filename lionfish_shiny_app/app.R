@@ -97,22 +97,23 @@ ui <- fluidPage(theme = my_bs_theme,
                  
                            ##### Home Page ######
                            
-                           tabPanel("Home Page", mainPanel(h3("Welcome!", align = "center"), 
-                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010.", align = "center"),
-                                                           p("In this app, you will be able to explore the following:", align = "center"),
+                           tabPanel("Home Page", mainPanel(width = 11, column(11, offset = 1,
+                                                           h3("Welcome!", align = "center"), 
+                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
+                                                           p("In this app, you will be able to explore the following:"),
                                                           
-                                                            p("1) Descriptions and photos of the observed lionfish prey species", align = "center"),
-                                                            p("2) The association between lionfish prey and the size of the lionfish", align = "center"),
-                                                            p("3) The relationship between observed depth of lionfish and their weight", align = "center"),
-                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site", align = "center"),
-                                                           img(src = "lionfish_image.png", height = "75%", width = "75%"),
+                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
+                                                            p("2) The association between lionfish prey and the size of the lionfish"),
+                                                            p("3) The relationship between observed depth of lionfish and their weight"),
+                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
+                                                           HTML('<center><img src="lionfish_image.png" width="400"></center>'),
                                                            
-                                                           h5("Data Citation:", align = "center"),
-                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data", center = "align"),
+                                                           h5("Data Citation:"),
+                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
                                                            
-                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken", align = "center"),
+                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
                                                           textOutput("output"))
-                                    ),
+                                    )),
                            
                            ##### Tab 1 #####
                            
