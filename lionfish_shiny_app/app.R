@@ -103,7 +103,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                            p("In this app, you will be able to explore the following:"),
                                                           
                                                             p("1) Descriptions and photos of the observed lionfish prey species"),
-                                                            p("2) The association between lionfish prey and the size of the lionfish"),
+                                                            p("2) The association between lionfish prey and lionfish size"),
                                                             p("3) The relationship between observed depth of lionfish and their weight"),
                                                             p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
                                                            HTML('<center><img src="lionfish_image.png" width="400"></center>'),
