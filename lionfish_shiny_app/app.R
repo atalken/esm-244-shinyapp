@@ -247,7 +247,9 @@ server <- function(input, output) {
        select(latitude, longitude, location) %>% 
        count(location, latitude, longitude) %>% 
        st_as_sf(., coords=c("longitude", "latitude"), crs = 4483) %>% 
-       filter(location %in% input$select_site)
+       rename(Count = n,
+              Location = location) %>% 
+       filter(Location %in% input$select_site)
    })
      
      output$location_plot<- renderTmap({
