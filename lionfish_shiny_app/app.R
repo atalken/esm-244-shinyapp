@@ -142,9 +142,9 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                         label = h5("Choose prey species:"),
                                                                         choices = unique(lionfish$common_name))
                                         ),
-                                        mainPanel("Lionfish Size and Weight Analysis",
+                                        mainPanel("Lionfish Size and Weight by Diet",
                                                   plotOutput("diet_plot"),
-                                                  "description")
+                                                  "This graph explores the change in size and weight of lionfish depending on their diet. Invasive lionfish eat a wide variety of marine organisms and generally consume whatever comes across their path! Juan Carlos wanted to investigate the relationship between a lionfish’s size and what prey species made up their diet. To do this, he caught lionfish and identified the prey species in their stomach. His findings are displayed in this exploratory plot.")
                                         )
                                     ),
                           
@@ -202,7 +202,7 @@ server <- function(input, output) {
         ("These small crustaceans are found in a variety of marine ecosystems, but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they can be found feeding mainly on algae and other detritus. (Photo by: Dean Janiak)")
       }
       else if (input$select_prey=="car") {
-        ("Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable. (Photo by: Francois Libert)")
+        ("Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells, and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable. (Photo by: Francois Libert)")
       }
       else if(input$select_prey=="sad") {
         ("The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs. (Photo by: Flickr user @kryn13)")
@@ -223,7 +223,6 @@ server <- function(input, output) {
           theme_minimal() +
           labs(x = "Length (cm)",
                y = "Weight (g)",
-               title = "Lionfish Size vs Weight",
                color = "Prey Species")
     )
   
