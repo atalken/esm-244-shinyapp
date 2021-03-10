@@ -180,28 +180,28 @@ server <- function(input, output) {
   
     output$img1 <- renderUI({
       if(input$select_prey == "pep"){
-        img(height = "75%", width = "75%", src = 'https://cdn11.bigcommerce.com/s-sid5v/images/stencil/2048x2048/products/1091/3349/2__49824.1553225499.jpg?c=2')}
+        img(height = "80%", width = "80%", src = 'peppermint.jpg')}
       else if(input$select_prey == "mys"){
-        img(height = "75%", width = "75%", src = 'https://reefs.com/blog/wp-content/uploads/2003/09/breeder1a-146b69570826ead8b1c21be3489a5300.jpg')}
+        img(height = "80%", width = "80%", src = 'mysid.jpg')}
       else if(input$select_prey == "car"){
-        img(height = "75%", width = "75%", src = 'http://www.nad-lembeh.com/wp-content/uploads/2013/09/MG_5104.jpg')}
+        img(height = "80%", width = "80%", src = 'cardinalfish.jpg')}
       else if(input$select_prey == "sad"){
-        img(height = "75%", width = "75%", src = 'https://www.petmd.com/sites/default/files/Labrisomid-Saddl-Blenny%209990733.jpg')}
+        img(height = "80%", width = "80%", src = 'blenny.jpg')}
       }
     )
     
     output$description <- renderText({
       if( input$select_prey=="pep") {
-        ("Peppermint shrimp are native to the Gulf of Mexico. These small shrimp are aptly named for their red striped bodies. They are detritus feeders and typically eat anemones and other decomposing material.")
+        ("Peppermint shrimp are native to the Gulf of Mexico. These small shrimp are aptly named for their red striped bodies. They are detritus feeders and typically eat anemones and other decomposing material. (Photo by: Jasper Nance)")
       }
       else if (input$select_prey=="mys") {
-        ("These small crustaceans are found in a variety of marine ecosystems, but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they can be found feeding mainly on algae and other detritus.")
+        ("These small crustaceans are found in a variety of marine ecosystems, but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they can be found feeding mainly on algae and other detritus. (Photo by: Dean Janiak)")
       }
       else if (input$select_prey=="car") {
-        ("Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable.")
+        ("Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable. (Photo by: Francois Libert)")
       }
       else if(input$select_prey=="sad") {
-        ("The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs.")
+        ("The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs. (Photo by: Flickr user @kryn13)")
       }})
   
   ##### Tab 2 Reactive output #####
