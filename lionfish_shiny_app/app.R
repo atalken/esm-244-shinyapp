@@ -21,11 +21,11 @@ tmap_mode("view")
 
 # Create the theme
 my_bs_theme <- bs_theme(
-    bg = "darkseagreen",
+    bg = "#4e5d6c",
     fg = "honeydew",
     primary = "white",
     base_font = font_google("Lato"),
-    heading_font = font_google("Merriweather")
+    heading_font = font_google("Lato")
 )
 
 # Read in the data
@@ -90,26 +90,27 @@ lionfish_spatial <- st_read(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
     common_name == "Cardinalfish" ~ "Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable.",
     common_name == "Saddle Blenny" ~ "The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs."))
 
-ui <- fluidPage(theme = my_bs_theme,
+ui <- fluidPage(theme = my_bs_theme, 
+                
                 
                 navbarPage("Lionfish in the Mexican Carribean",
                  
                            ##### Home Page ######
                            
-                           tabPanel("Home Page", mainPanel(h3("Welcome!"), 
-                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
-                                                           p("In this app, you will be able to explore the following:"),
+                           tabPanel("Home Page", mainPanel(h3("Welcome!", align = "center"), 
+                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010.", align = "center"),
+                                                           p("In this app, you will be able to explore the following:", align = "center"),
                                                           
-                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
-                                                            p("2) The association between lionfish prey and the size of the lionfish"),
-                                                            p("3) The relationship between observed depth of lionfish and their weight"),
-                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
+                                                            p("1) Descriptions and photos of the observed lionfish prey species", align = "center"),
+                                                            p("2) The association between lionfish prey and the size of the lionfish", align = "center"),
+                                                            p("3) The relationship between observed depth of lionfish and their weight", align = "center"),
+                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site", align = "center"),
                                                            img(src = "lionfish_image.png", height = "75%", width = "75%"),
                                                            
-                                                           h5("Data Citation:"),
-                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
+                                                           h5("Data Citation:", align = "center"),
+                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data", center = "align"),
                                                            
-                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
+                                                           h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken", align = "center"),
                                                           textOutput("output"))
                                     ),
                            
@@ -122,8 +123,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                choices = list("Peppermint Shrimp" = "pep",
                                                                               "Mysid Shrimp" = "mys",
                                                                               "Cardinalfish" = "car",
-                                                                              "Saddle Blenny" = "sad",
-                                                                              "Other" = "oth"),
+                                                                              "Saddle Blenny" = "sad"),
                                                                selected = "pep"),
                                                                ),
                                       mainPanel(uiOutput("img1"),
@@ -133,7 +133,7 @@ ui <- fluidPage(theme = my_bs_theme,
                            
                            #####  Tab 2  #####
                            
-                           tabPanel("Body Size to Prey Choice",
+                           tabPanel("Size Analysis",
                                     sidebarLayout(
                                         sidebarPanel(checkboxGroupInput(inputId = "pick_species",
                                                                         label = h5("Choose prey species:"),
@@ -146,7 +146,7 @@ ui <- fluidPage(theme = my_bs_theme,
                           
                            ##### Tab 3 #####
                           
-                           tabPanel("Fish Weight at Varying Depths",
+                           tabPanel("Depth Analysis",
                                     sidebarLayout(
                                         sidebarPanel(sliderInput(inputId = "select_depth",
                                                                  label = h5("Select depth range:"),
@@ -159,7 +159,7 @@ ui <- fluidPage(theme = my_bs_theme,
                            
                            ##### Tab 4 #####
                           
-                           tabPanel("Interactive Spatial Map",
+                           tabPanel("Spatial Analysis",
                                     sidebarLayout(
                                        sidebarPanel(radioButtons(inputId = "select_site", 
                                                                   label = h5("Select Site:"),
