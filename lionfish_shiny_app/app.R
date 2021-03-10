@@ -102,14 +102,16 @@ ui <- fluidPage(theme = my_bs_theme,
                                                            h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
                                                            p("In this app, you will be able to explore the following:"),
                                                           
-                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
-                                                            p("2) The association between lionfish prey and lionfish size"),
-                                                            p("3) The relationship between observed depth of lionfish and their weight"),
-                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
-                                                           HTML('<center><img src="lionfish_image.png" width="400"></center>'),
-                                                           
-                                                           h5("Data Citation:"),
-                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
+
+                                                            p("1) Descriptions and photos of the observed lionfish prey species", align = "center"),
+                                                            p("2) The association between lionfish prey and the size of the lionfish", align = "center"),
+                                                            p("3) The relationship between observed depth of lionfish and their weight", align = "center"),
+                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site", align = "center"),
+                                                           HTML('<center><img src="lionfish.jpg" width="400"></center>'),
+                                                           p("Photo by: Michael Aston", align = "center"),
+                                                           h5("Data Citation:", align = "center"),
+                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data", center = "align"),
+
                                                            
                                                            h6("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"),
                                                           textOutput("output"))
@@ -140,8 +142,9 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                         label = h5("Choose prey species:"),
                                                                         choices = unique(lionfish$common_name))
                                         ),
-                                        mainPanel("A comparison of lionfish size (in length and weight) to their selected prey species",
-                                                  plotOutput("diet_plot"))
+                                        mainPanel("Lionfish Size and Weight Analysis",
+                                                  plotOutput("diet_plot"),
+                                                  "description")
                                         )
                                     ),
                           
@@ -154,7 +157,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                  min = 0, max = 40,
                                                                  value = c(5, 10))
                                          ),
-                                        mainPanel("Depth Output", plotOutput("depth_plot"))
+                                        mainPanel("Lionfish Depth Analysis", plotOutput("depth_plot"), "description")
                                         )
                                     ),
                            
@@ -167,7 +170,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                   choices = unique(lionfish_spatial$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"))
+                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"), "description")
                                         
                                     ))
                 )
@@ -219,7 +222,9 @@ server <- function(input, output) {
             geom_point(aes(color = common_name)) +
           theme_minimal() +
           labs(x = "Length (cm)",
-               y = "Weight (g)")
+               y = "Weight (g)",
+               title = "Lionfish Size vs Weight",
+               color = "Prey Species")
     )
   
   ##### Tab 3 Reactive output ##### 
