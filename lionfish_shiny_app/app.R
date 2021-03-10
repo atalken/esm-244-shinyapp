@@ -105,8 +105,8 @@ ui <- fluidPage(theme = my_bs_theme,
                                                             p("2) The association between lionfish prey and the size of the lionfish", align = "center"),
                                                             p("3) The relationship between observed depth of lionfish and their weight", align = "center"),
                                                             p("4) An interactive spatial map depicting lionfish occurences based on the sampling site", align = "center"),
-                                                           img(src = "lionfish_image.png", height = "75%", width = "75%"),
-                                                           
+                                                           img(src = "lionfish.jpg", height = "100%", width = "100%"),
+                                                           p("Photo by: Michael Aston", align = "center"),
                                                            h5("Data Citation:", align = "center"),
                                                            p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data", center = "align"),
                                                            
