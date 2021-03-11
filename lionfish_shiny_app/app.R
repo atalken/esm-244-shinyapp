@@ -98,22 +98,20 @@ ui <- fluidPage(theme = my_bs_theme,
                            ##### Home Page ######
                            
                            tabPanel("Home Page", mainPanel(width = 11, column(11, offset = 1,
-                                                           h3("Welcome!", align = "center"), 
-                                                           h6("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
-                                                           p("In this app, you will be able to explore the following:"),
-                                                          
-
-                                                            p("1) Descriptions and photos of the observed lionfish prey species"),
-                                                            p("2) The association between lionfish prey and the size of the lionfish"),
-                                                            p("3) The relationship between observed depth of lionfish and their weight"),
-                                                            p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
-                                                           HTML('<center><img src="lionfish.jpg" width="600"></center>'),
-                                                           p("Photo by: Michael Aston", align = "center"),
-                                                           h5("Data Citation:"),
-                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
-
-                                                           
-                                                           h6(em("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken")),
+                                                          h3("Welcome!", align = "center"), 
+                                                          h5("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
+                                                          h5("In this app, you will be able to explore the following:"),
+                                                          br(),
+                                                          p("1) Descriptions and photos of the observed lionfish prey species"),
+                                                          p("2) The association between lionfish prey and the size of the lionfish"),
+                                                          p("3) The relationship between observed depth of lionfish and their weight"),
+                                                          p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
+                                                          HTML('<center><img src="lionfish.jpg" width="600"></center>'),
+                                                          p("Photo by: Michael Aston", align = "center"),
+                                                          h5("Data Citation:"),
+                                                          p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
+                                                          br(),
+                                                          h6(em("Shiny App created by Grace Kumaishi, Anastasia Kunz and Anna Talken"), align = "center"),
                                                           textOutput("output"))
                                     )),
                            
@@ -157,7 +155,8 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                  min = 0, max = 40,
                                                                  value = c(5, 10))
                                          ),
-                                        mainPanel("Lionfish Depth Analysis", plotOutput("depth_plot"), "description")
+                                        mainPanel("Lionfish Depth Analysis", plotOutput("depth_plot"), 
+                                                  "When speaking with Juan Carlos about the data, we learned that not much is known about the vertical distribution of lionfish within a water column. We were curious to see if larger lionfish of reproductive age are able to reside at deeper depths, perhaps making the species more difficult to cull. This exploratory plot shows the depth at which individual lion fish were caught plotted against individual fish weight in grams. ")
                                         )
                                     ),
                            
@@ -166,7 +165,7 @@ ui <- fluidPage(theme = my_bs_theme,
                            tabPanel("Spatial Analysis",
                                     sidebarLayout(
                                        sidebarPanel(radioButtons(inputId = "select_site", 
-                                                                  label = h5("Select Site:"),
+                                                                  label = h5("Select site:"),
                                                                   choices = unique(lionfish_spatial$location), 
                                                                   selected = "Paraiso")),
                                   
