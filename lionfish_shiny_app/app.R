@@ -169,7 +169,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                   choices = unique(lionfish_spatial$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"), "description")
+                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"), "This interactive spatial map can be used to explore the various locations where Juan Carlos collected lionfish data from. All 10 of these sites are located on the Caribbean Sea side of Mexico, near the town of Puerto Aventuras. Choose a location and click on the dot on the map to see how many fish observations were recorded at that site!")
                                         
                                     ))
                 )
