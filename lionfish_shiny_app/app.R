@@ -57,7 +57,9 @@ lionfish <- read_csv(here("lionfish_shiny_app", "lionfish_data.csv")) %>%
     common_name == "Peppermint Shrimp" ~ "Peppermint shrimp are native to the Gulf of Mexico and are small shrimp that are aptly named for their red striped bodies. They are detritus feeders and typically eat decomposing material in the ocean.",
     common_name == "Mysid Shrimp" ~ "These small crustaceans are found in a variety of ecosystems but primarily in the Gulf of Mexico. Their two antennae and big eyes make them easy to recognize, and they feed mainly on algae and other detritus.",
     common_name == "Cardinalfish" ~ "Cardinalfish are in the family ‘Apogonidae’ and are typically found in shallow tropical reefs. They often find refuge inside conch shells,and typically feed at night on benthic crustaceans and other small invertebrates. These small fish have two dorsal fins and large eyes and mouths that makes them recognizable.",
-    common_name == "Saddle Blenny" ~ "The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs."))
+    common_name == "Saddle Blenny" ~ "The Saddle Blenny is typically found among shallow waters in rocky and coral reefs throughout the Caribbean.  Colors vary, but many are red and brown with distinct stripes. These fish feed on small organisms such as benthic worms, shrimp and crabs.")) %>% 
+  drop_na(item_total_length_cm) %>% 
+  mutate(item_total_length_cm = as.numeric(item_total_length_cm))
 
 # Read in the data for spatial use
 lionfish_spatial <- st_read(here("lionfish_shiny_app", "lionfish_data.csv")) %>% 
@@ -100,14 +102,16 @@ ui <- fluidPage(theme = my_bs_theme,
                            tabPanel("Home Page", mainPanel(width = 11, column(11, offset = 1,
                                                           h3("Welcome!", align = "center"), 
                                                           h5("Are you interested in learning about invasive lionfish in Mexican Carribean waters? This Shiny App allows you to explore data on lionfish and their prey species that was collected by Bren PhD student Juan Carlos Villasenor along the central Mexican Carribean coast in 2010."),
-                                                          h5("In this app, you will be able to explore the following:"),
                                                           br(),
+                                                          HTML('<center><img src="lionfish.jpg" width="600"></center>'),
+                                                          p("Photo by: Michael Aston", align = "center"),
+                                                          br(),
+                                                          h5("In this app, you will be able to explore the following:"),
                                                           p("1) Descriptions and photos of the observed lionfish prey species"),
                                                           p("2) The association between lionfish prey and the size of the lionfish"),
                                                           p("3) The relationship between observed depth of lionfish and their weight"),
                                                           p("4) An interactive spatial map depicting lionfish occurences based on the sampling site"),
-                                                          HTML('<center><img src="lionfish.jpg" width="600"></center>'),
-                                                          p("Photo by: Michael Aston", align = "center"),
+                                                          br(),
                                                           h5("Data Citation:"),
                                                           p("Villaseñor-Derbez, JC. (2010). Lionfish Biometry, https://github.com/jcvdav/lionfish_biometry/tree/master/data"),
                                                           br(),
@@ -127,7 +131,8 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                               "Saddle Blenny" = "sad"),
                                                                selected = "pep"),
                                                                ),
-                                      mainPanel(uiOutput("img1"),
+                                      mainPanel("Top Four Observed Prey Species",
+                                                uiOutput("img1"),
                                                 textOutput("description"))
                                     )
                            ),
@@ -140,9 +145,9 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                         label = h5("Choose prey species:"),
                                                                         choices = unique(lionfish$common_name))
                                         ),
-                                        mainPanel("Lionfish Size and Weight by Diet",
+                                        mainPanel("Lionfish Size versus Prey Size",
                                                   plotOutput("diet_plot"),
-                                                  "This graph explores the change in size and weight of lionfish depending on their diet. Invasive lionfish eat a wide variety of marine organisms and generally consume whatever comes across their path! Juan Carlos wanted to investigate the relationship between a lionfish’s size and what prey species made up their diet. To do this, he caught lionfish and identified the prey species in their stomach. His findings are displayed in this exploratory plot.")
+                                                  "This graph explores the relationship between lionfish size and prey size. Invasive lionfish eat a wide variety of marine organisms and generally consume whatever comes across their path! Juan Carlos wanted to investigate the relationship between a lionfish’s size and what prey species made up their diet. To do this, he caught lionfish and identified the prey species in their stomach. His findings are displayed in this exploratory plot.")
                                         )
                                     ),
                           
@@ -169,7 +174,7 @@ ui <- fluidPage(theme = my_bs_theme,
                                                                   choices = unique(lionfish_spatial$location), 
                                                                   selected = "Paraiso")),
                                   
-                                        mainPanel("Observations of Lionfish by location", tmapOutput("location_plot"), "This interactive spatial map can be used to explore the various locations where Juan Carlos collected lionfish data from. All 10 of these sites are located on the Caribbean Sea side of Mexico, near the town of Puerto Aventuras. Choose a location and click on the dot on the map to see how many fish observations were recorded at that site!")
+                                        mainPanel("Observations of Lionfish by Location", tmapOutput("location_plot"), "This interactive spatial map can be used to explore the various locations where Juan Carlos collected lionfish data from. All 10 of these sites are located on the Caribbean Sea side of Mexico, near the town of Puerto Aventuras. Choose a location and click on the dot on the map to see how many fish observations were recorded at that site!")
                                         
                                     ))
                 )
@@ -217,11 +222,11 @@ server <- function(input, output) {
     })
     
     output$diet_plot <- renderPlot(
-        ggplot(data = diet_reactive(), aes(x = total_length_cm, y = total_weigth_gr)) +
+        ggplot(data = diet_reactive(), aes(x = total_length_cm, y = item_total_length_cm)) +
             geom_point(aes(color = common_name)) +
           theme_minimal() +
-          labs(x = "Length (cm)",
-               y = "Weight (g)",
+          labs(x = "Lionfish length (cm)",
+               y = "Prey length (cm)",
                color = "Prey Species")
     )
   
